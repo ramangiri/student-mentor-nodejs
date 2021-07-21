@@ -8,6 +8,10 @@ let objectId = mongodb.ObjectID;
 const app = express();
 const port = process.env.PORT || 4000;
 
+app.get("/", (req, res) => {
+  res.send("Hello server is up and running");
+});
+
 app.use(express.json());
 
 app.get("/mentor", (req, res) => {
